@@ -21,12 +21,16 @@ def check_alarm(alarm_time):
     return current_time == alarm_time
 
 alarm_time = '09:01:00'
+alarm_time2 = '09:05:00'
 
 while(True):
     
-    if check_alarm(alarm_time) :
+    if check_alarm(alarm_time):
         print('\n ALARM is ringing')
-        break
+
+    elif check_alarm(alarm_time2):
+        print('\n ALARM2 is ringing')
+
     else:
         print(f'Curent NTP time is {get_ntp_time()}')
 
